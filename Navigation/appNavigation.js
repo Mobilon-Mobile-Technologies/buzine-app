@@ -7,6 +7,7 @@ import HomeScreen from "../Screens/homeScreen.js";
 import SearchScreen from "../Screens/searchScreen.js";
 import SavedScreen from "../Screens/savedScreen.js";
 import ProfileScreen from "../Screens/profileScreen.js";
+import UploadScreen from "../Screens/uploadScreen.js";
 import plus from '../assets/icons/plus.png';
 import { FontAwesome5} from '@expo/vector-icons'
 import { Animated } from "react-native";
@@ -80,27 +81,27 @@ export default function appNavigation() {
           }
         })}></Tab.Screen>
 
-        <Tab.Screen name="Actions Bar" component={EmptyScreen} options={{
+        <Tab.Screen name="Actions Bar" component={UploadScreen} options={{
           tabBarIcon: ({focused}) => (
-            <TouchableOpacity>
-              <View style={{
-                width: 55,
-                height: 55,
-                backgroundColor: 'red',
-                borderRadius: 60,
-                justifyContent: 'center',
-                alignItems: 'center',
-                marginBottom: 50
-              }}>
-                <Image source={plus} style={{
-                  width:22,
-                  height: 22,
-                  tintColor: 'white',
-                }}/>
-              </View>
-            </TouchableOpacity>
+            <View style={{
+              position: 'absolute',
+              
+            }}>
+              <FontAwesome5
+                name="plus"
+                size={20}
+                color={focused ? 'red' : 'gray'}
+              ></FontAwesome5>
+            </View>
           )
-        }}></Tab.Screen>
+        }}listeners={({navigation,route}) => ({
+          tabPress: e=>{
+            Animated.spring(tabOffsetValue, {
+              toValue: getWidth()*2,
+              useNativeDriver: true,
+            }).start();
+          }
+        })}></Tab.Screen>
 
         <Tab.Screen name="Saved" component={SavedScreen} options={{
           tabBarIcon: ({focused}) => (
@@ -165,13 +166,6 @@ export default function appNavigation() {
   );
 }
 
-function EmptyScreen(){
-  return(
-    <View className={`flex-1 justify-center items-center`}>
-      <Text>Actions Bar!</Text>
-    </View>
-  )
-}
 
 function getWidth(){
   let width=Dimensions.get('window').width
