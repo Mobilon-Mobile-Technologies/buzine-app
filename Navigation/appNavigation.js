@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useRef,navigation } from "react";
 import { View, Text, TouchableOpacity, Image} from 'react-native'
 import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
@@ -9,10 +9,15 @@ import SavedScreen from "../Screens/savedScreen.js";
 import ProfileScreen from "../Screens/profileScreen.js";
 import plus from '../assets/icons/plus.png';
 import { FontAwesome5} from '@expo/vector-icons'
+import { Animated } from "react-native";
+import { Dimensions } from "react-native";
 
 const Tab = createBottomTabNavigator();
 
+
 export default function appNavigation() {
+
+  const tabOffsetValue = useRef(new Animated.Value(0)).current;
   return (
     <NavigationContainer>
       <Tab.Navigator screenOptions={{
@@ -44,7 +49,14 @@ export default function appNavigation() {
               ></FontAwesome5>
             </View>
           )
-        }}></Tab.Screen>
+        }} listeners={({navigation,route}) => ({
+          tabPress: e=>{
+            Animated.spring(tabOffsetValue, {
+              toValue: 0,
+              useNativeDriver: true,
+            }).start();
+          }
+        })}></Tab.Screen>
 
         <Tab.Screen name="Search" component={SearchScreen} options={{
           tabBarIcon: ({focused}) => (
@@ -59,7 +71,14 @@ export default function appNavigation() {
               ></FontAwesome5>
             </View>
           )
-        }}></Tab.Screen>
+        }}listeners={({navigation,route}) => ({
+          tabPress: e=>{
+            Animated.spring(tabOffsetValue, {
+              toValue: getWidth(),
+              useNativeDriver: true,
+            }).start();
+          }
+        })}></Tab.Screen>
 
         <Tab.Screen name="Actions Bar" component={EmptyScreen} options={{
           tabBarIcon: ({focused}) => (
@@ -96,7 +115,14 @@ export default function appNavigation() {
               ></FontAwesome5>
             </View>
           )
-        }}></Tab.Screen>
+        }}listeners={({navigation,route}) => ({
+          tabPress: e=>{
+            Animated.spring(tabOffsetValue, {
+              toValue: getWidth()*3,
+              useNativeDriver: true,
+            }).start();
+          }
+        })}></Tab.Screen>
 
         <Tab.Screen name="Profile" component={ProfileScreen} options={{
           tabBarIcon: ({focused}) => (
@@ -111,8 +137,30 @@ export default function appNavigation() {
               ></FontAwesome5>
             </View>
           )
-        }}></Tab.Screen>
+        }}listeners={({navigation,route}) => ({
+          tabPress: e=>{
+            Animated.spring(tabOffsetValue, {
+              toValue: getWidth()*4,
+              useNativeDriver: true,
+            }).start();
+          }
+        })}></Tab.Screen>
       </Tab.Navigator>
+      
+      <Animated.View style={{
+        width: getWidth()-20,
+        height: 2,
+        backgroundColor: 'red',
+        position: 'absolute',
+        bottom: 88,
+        left: 49,
+        borderRadius: 20,
+        transform:[
+          { translateX: tabOffsetValue}
+        ]
+      }}>
+
+      </Animated.View>
     </NavigationContainer>
   );
 }
@@ -123,4 +171,12 @@ function EmptyScreen(){
       <Text>Actions Bar!</Text>
     </View>
   )
+}
+
+function getWidth(){
+  let width=Dimensions.get('window').width
+
+  width=width-80
+
+  return width/5
 }
