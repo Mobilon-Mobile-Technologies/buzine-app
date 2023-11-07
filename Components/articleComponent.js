@@ -4,7 +4,7 @@ import React from 'react'
 export default function ArticleComponent({item}){
   return (
     <View>
-        <Text>{item.title}</Text>
+        <Text>{item.id}</Text>
     </View>
   )
 }

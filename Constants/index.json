@@ -4,14 +4,14 @@
         "title": "Post 1",
         "type": "post",
         "description": "Lorem ipsum dolor sit amet, quem deseruisse ut mea, mea et malorum deserunt. Eu est adipisci rationibus. An eos audiam adipiscing. Quot sale sea ei.",
-       "image": "../assets/images/1.png",
+       "image": "1.png",
         "url": "https://instagram.fdel3-1.fna.fbcdn.net/av/t51.2885-15/387267354_784174260059679_7546763265777643864_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyIn0&_nc_ht=instagram.fdel3-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=IvE_ILsEXlkAX-MjJvZ&edm=ACWDqb8BAAAA&ccb=7-5&ig_cache_key=MzIxMDUxODY5NzIxNDcyMDU2Mw%3D%3D.2-ccb7-5&oh=00_AfDO-BVUttyJQvKXPlgwqLnpbKFnV4gRS3Z-dlGEIR2vVA&oe=654CF95D&_nc_sid=ee9879" 
     },
     {
         "id": 2,
         "title": "Article 1",
         "type": "article",
-        "image": "../assets/images/2.png",
+        "image": "2.png",
         "description": "Et eros doming vivendo per. Nam duis adolescens cu, odio movet minimum no ius. Id viderer insolens ius. Te fuisset democritum nec, cu vide tritani quo, falli nulla legendos cum in.",
         "url": "https://instagram.fdel3-2.fna.fbcdn.net/v/t51.2885-15/385854628_691494132530725_8503644121602661083_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE0NDAuc2RyIn0&_nc_ht=instagram.fdel3-2.fna.fbcdn.net&_nc_cat=101&_nc_ohc=8h6j9QHSSB8AX9xETEl&edm=ACWDqb8BAAAA&ccb=7-5&ig_cache_key=MzIwNTUyNTc0NTM0NjEzMzU5Nw%3D%3D.2-ccb7-5&oh=00_AfBvNgFkfF58keWlJgne4AaaHFcvHkmQVVvmOmjgN8WUlA&oe=654DA183&_nc_sid=ee9879" 
     },
@@ -19,7 +19,7 @@
         "id": 3,
         "title": "Article 2",
         "type": "article",
-        "image": "../assets/images/3.png",
+        "image": "3.png",
         "description": "Ea pri munere expetenda reprehendunt, ridens molestiae pro eu. Sint nominavi cum ea, ut indoctum moderatius quo. Utamur oportere eos te, in ullum sadipscing per, eu cum omnium percipit. Mea adipisci necessitatibus eu, quo et ignota repudiare, eum modo insolens salutatus no.",
         "url": "https://instagram.fdel3-2.fna.fbcdn.net/v/t51.2885-15/383228027_1049996032690133_777579755951173437_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE0NDAuc2RyIn0&_nc_ht=instagram.fdel3-2.fna.fbcdn.net&_nc_cat=105&_nc_ohc=hcjjanhBLO4AX8fbJaZ&edm=ACWDqb8BAAAA&ccb=7-5&ig_cache_key=MzIwMTgwMzI3MzkxMjQzNzM3Mg%3D%3D.2-ccb7-5&oh=00_AfBK_erKdLWs4JvHpKJA_RgzEpezfkib2nbf50uySgV_QA&oe=654D868D&_nc_sid=ee9879" 
     },
@@ -27,7 +27,7 @@
         "id": 4,
         "title": "Post 2",
         "type": "post",
-        "image": "../assets/images/4.png",
+        "image": "4.png",
         "description": "Vis te modo labores, cum eu moderatius persequeris, ne eos malis meliore sententiae. An nostrum commune iudicabit nam. Est ea vocent volutpat, ne per quaeque iracundia. His cetero imperdiet assueverit cu, novum everti mollis cum cu. Utinam officiis appellantur an eos, ei vim pertinax eloquentiam, ad stet vidisse efficiendi per.",
         "url": "https://instagram.fdel3-1.fna.fbcdn.net/v/t51.2885-15/380925057_285873414308160_877508583992457168_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE0NDAuc2RyIn0&_nc_ht=instagram.fdel3-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=QTlhTr6uL3wAX83oO_O&edm=ACWDqb8BAAAA&ccb=7-5&ig_cache_key=MzE5NzA5MTMzNDg3NDA3OTgxNQ%3D%3D.2-ccb7-5&oh=00_AfChbGgDo7KV2uML7ZSVXZ7Pjd2aTv_EJJ-f1ZjtwcAjOQ&oe=654D8627&_nc_sid=ee9879" 
     },
@@ -35,7 +35,7 @@
         "id": 5,
         "title": "Post 3",
         "type": "post",
-        "image": "../assets/images/5.png",
+        "image": "5.png",
         "description": "Ut facer petentium his, stet hendrerit no cum. Id mei ullum omittam iudicabit. Posse ceteros et quo, eum an sumo adhuc primis. Eam eu periculis euripidis suscipiantur, fuisset tractatos ea usu. Nec unum habeo neglegentur ut.",
         "url": "https://instagram.fdel3-3.fna.fbcdn.net/v/t51.2885-15/379319273_751341730085662_738407953773311514_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE0NDAuc2RyIn0&_nc_ht=instagram.fdel3-3.fna.fbcdn.net&_nc_cat=110&_nc_ohc=ng61IWc6-o8AX8Wwtb0&edm=ACWDqb8BAAAA&ccb=7-5&ig_cache_key=MzE5NDU5MjE0NTA5NjMyNTYyMg%3D%3D.2-ccb7-5&oh=00_AfCYWCxrth0g0NGWRn_bNG0huBrA2vEs5B7mSAaYFZFz0w&oe=654D8856&_nc_sid=ee9879" 
     }

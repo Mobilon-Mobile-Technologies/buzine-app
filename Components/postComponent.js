@@ -10,7 +10,7 @@ export default function PostComponent({item}){
   return (
     <View style={{height: cardHeight, width: cardWidth, marginHorizontal: 20, marginVertical: 3, borderRadius: 20}}>
         
-        <Image source={{uri: item.url}}></Image>
+        <Image source={require(item.image)}></Image>
         
     </View>
   )
