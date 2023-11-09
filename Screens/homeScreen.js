@@ -25,14 +25,17 @@ export default function HomeScreen() {
       style={{
         flex: 1,
         marginTop: 100,
+        marginBottom: 90,
       }}
     >
       <FlatList
+        showsVerticalScrollIndicator={false}
         data={data}
         vertical={true}
         numColumns={2}
         renderItem={({ item }) =>
-          item.type=="post" ? <PostComponent item={item} /> : <ArticleComponent item={item}/>
+
+          item.type=="post" ? <PostComponent item={item} data={data} /> : <ArticleComponent item={item} data={data}/>
         }
         keyExtractor={(item) => item.id.toString()}
       />
