@@ -1,30 +1,13 @@
 import { View, Text, Dimensions, Image } from "react-native";
-import React,{useState,useEffect} from "react";
+import React from "react";
 
 const { width, height } = Dimensions.get("window");
 
 const cardWidth = width * 0.45;
 const cardHeight = height * 0.38;
 
-export default function PostComponent({ item, data }) {
-  
-  const [reorderCheck, setReorderCheck] = useState(null);
+export default function PostComponent({ item }) {
 
-  useEffect(() => {
-    var itemTypeCheck;
-    try {
-      itemTypeCheck = data.find((dataItem) => dataItem.id == item.id - 2);
-
-      if (itemTypeCheck.type == "article") {
-        console.log(item.id+" yes")
-        setReorderCheck("true");
-      } else {
-        setReorderCheck("false");
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  }, []);
 
   if(item.url){
     return (
@@ -35,9 +18,8 @@ export default function PostComponent({ item, data }) {
           marginLeft: 10,
           marginBottom: 6,
           borderRadius: 20,
-          backgroundColor: "black",
+          backgroundColor: "#cbced6",
           elevation: 5,
-          // bottom: reorderCheck=='true' ? width*0.37 :null
         }}
       >
         

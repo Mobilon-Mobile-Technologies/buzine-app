@@ -64,9 +64,9 @@ export default function HomeScreen() {
           vertical={true}
           renderItem={({ item }) =>
             item.type == "post" ? (
-              <PostComponent item={item} data={data} />
+              <PostComponent item={item} />
             ) : (
-              <ArticleComponent item={item} data={data} />
+              <ArticleComponent item={item} />
             )
           }
           keyExtractor={(item) => item.id.toString()}
