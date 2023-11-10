@@ -37,7 +37,7 @@ export default function PostComponent({ item, data }) {
           borderRadius: 20,
           backgroundColor: "black",
           elevation: 5,
-          bottom: reorderCheck=='true' ? width*0.37 :null
+          // bottom: reorderCheck=='true' ? width*0.37 :null
         }}
       >
         
