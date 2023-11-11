@@ -16,7 +16,7 @@ export default function ArticleComponent({ item }) {
           height: cardHeight,
           width: cardWidth,
           marginLeft: 10,
-          marginBottom: 6,
+          marginBottom: 10,
           borderRadius: 20,
           backgroundColor: "#cbced6",
           elevation: 5,
