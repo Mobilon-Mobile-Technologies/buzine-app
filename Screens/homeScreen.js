@@ -1,5 +1,5 @@
-import { View, FlatList,Text, Dimensions, ActivityIndicator } from "react-native";
-import React, { useState, useEffect } from "react";
+import { View, FlatList,Animated, Dimensions, ActivityIndicator } from "react-native";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import PostComponent from "../Components/postComponent";
 import ArticleComponent from "../Components/articleComponent";
@@ -13,6 +13,7 @@ export default function HomeScreen() {
   const [dataPart1, setDataPart1] = useState([]);
   const [dataPart2, setDataPart2] = useState([]);
   const [currentPage, setCurrentPage]=useState(1);
+  
 
   const baseURL =
     "https://raw.githubusercontent.com/Mobilon-Mobile-Technologies/buzine-app/archit-branch/Constants/index.json";
@@ -32,6 +33,14 @@ export default function HomeScreen() {
         console.log("Error: ", err);
       });
   }, []);
+
+  function getWidth() {
+    let width = Dimensions.get("window").width;
+  
+    width = width - 80;
+  
+    return width / 5;
+  }
 
   const renderLoader=()=>{
     return(
@@ -61,14 +70,16 @@ export default function HomeScreen() {
       }}
     >
       
+      
       <HeaderComponent/>
 
-      <View style={{flex: 1, flexDirection: "row", height: height }}>
+      <View style={{flex: 1, flexDirection: "row", height: height, marginTop: 10 }}>
         <FlatList
           showsVerticalScrollIndicator={false}
           data={dataPart1}
           vertical={true}
           // style={{top:40, marginBottom : 40}}
+          
           renderItem={({ item }) =>
             item.type == "post" ? (
               <PostComponent item={item} />
@@ -87,6 +98,7 @@ export default function HomeScreen() {
           data={dataPart2}
           vertical={true}
           // style={{height: height*0.9, bottom: 55}}
+          
           renderItem={({ item }) =>
             item.type == "post" ? (
               <PostComponent item={item} data={data} />
@@ -100,6 +112,7 @@ export default function HomeScreen() {
           // onEndReachedThreshold={0}
         />
       </View>
+      
       
     </View>
     
