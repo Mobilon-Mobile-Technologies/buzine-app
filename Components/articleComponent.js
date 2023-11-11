@@ -18,7 +18,7 @@ export default function ArticleComponent({ item }) {
           marginLeft: 10,
           marginBottom: 6,
           borderRadius: 20,
-          backgroundColor: "black",
+          backgroundColor: "#cbced6",
           elevation: 5,
         
         }}

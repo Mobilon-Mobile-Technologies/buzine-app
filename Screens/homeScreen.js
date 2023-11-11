@@ -52,7 +52,7 @@ export default function HomeScreen() {
       style={{
         flex: 1,
         marginTop: 100,
-        marginBottom: 90,
+        // marginBottom: 90,
         width: width,
       }}
     >
