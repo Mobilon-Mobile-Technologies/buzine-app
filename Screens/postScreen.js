@@ -78,7 +78,7 @@ export default function PostScreen(props) {
               >
                 {item.username}
               </Text>
-              <Text></Text>
+              <Text>{item.upload date}</Text>
             </View>
           </View>
         </ScrollView>
