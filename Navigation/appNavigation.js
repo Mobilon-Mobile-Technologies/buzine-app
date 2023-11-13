@@ -205,7 +205,7 @@ export default function appNavigation() {
         <Stack.Screen
           name="Post"
           component={PostScreen}
-          options={{ title: "Post Screen", headerShown: false }}
+          options={{ title: "Post Screen", headerShown: false, animation: 'slide_from_right' }}
         />
         <Stack.Screen
           name="Article"

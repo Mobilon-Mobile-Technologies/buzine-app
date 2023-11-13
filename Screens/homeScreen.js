@@ -35,29 +35,7 @@ export default function HomeScreen() {
       });
   }, []);
 
-  function getWidth() {
-    let width = Dimensions.get("window").width;
   
-    width = width - 80;
-  
-    return width / 5;
-  }
-
-  const renderLoader=()=>{
-    return(
-      <View style={{
-        marginVertical: 16,
-        alignItems: 'center',
-      }}>
-        <ActivityIndicator size="large" color="#aaa"/>
-      </View>
-    )
-  }
-
-  const loadMoreItem=()=>{
-    console.log("load more item")
-    setCurrentPage(currentPage+1);
-  }
 
   return (
     
