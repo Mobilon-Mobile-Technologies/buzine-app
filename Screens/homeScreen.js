@@ -5,6 +5,7 @@ import PostComponent from "../Components/postComponent";
 import ArticleComponent from "../Components/articleComponent";
 import HeaderComponent from "../Components/headerComponent";
 import { ScrollView } from "react-native";
+import { StatusBar } from "expo-status-bar";
 
 const { width, height } = Dimensions.get("window");
 
@@ -69,6 +70,7 @@ export default function HomeScreen() {
         height:  height
       }}
     >
+      <StatusBar style={'light'}/>
       
       
       <HeaderComponent/>

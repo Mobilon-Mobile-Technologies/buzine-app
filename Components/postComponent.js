@@ -16,7 +16,7 @@ export default function PostComponent({ item }) {
   if (item.url) {
     return (
       <TouchableOpacity
-      onPress={()=> navigation.navigate("Post")}>
+      onPress={()=> navigation.navigate("Post",{...item})}>
       <View
         style={{
           height: cardHeight,
