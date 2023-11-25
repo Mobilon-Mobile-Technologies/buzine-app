@@ -6,14 +6,28 @@ import {
   TouchableOpacity,
   Touchable,
   ScrollView,
+  Share,
+  FlatList
 } from "react-native";
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ChevronLeftIcon } from "react-native-heroicons/outline";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import { HeartIcon } from "react-native-heroicons/solid";
-import Animated, {FadeInDown, FadeInLeft, FadeInUp} from "react-native-reanimated";
+import BottomSheet from "@gorhom/bottom-sheet";
+import Animated, {
+  FadeIn,
+  FadeInDown,
+  FadeInLeft,
+  FadeInUp,
+  FadeOut,
+} from "react-native-reanimated";
+import MoreFromUser from "../Components/moreFromUser";
+import MorePosts from "../Constants/";
+
 
 const { width, height } = Dimensions.get("window");
 
@@ -21,12 +35,39 @@ export default function PostScreen(props) {
   const item = props.route.params;
   const navigation = useNavigation();
   const [isFavourite, toggleFavourite] = useState(false);
-  const [isFollowing, toggleFollow]=useState(false);
+  const [isFollowing, toggleFollow] = useState(false);
+  const [saved, toggleSaved] = useState(false);
+  const snapPoints = useMemo(() => ["50%", "85%"], []);
+  const url = "App URL";
+  
+
+  const onShare = async () => {
+    try {
+      const result = await Share.share({
+        message: "Buzine Coming Soon" + url,
+      });
+
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+          console.log(
+            "shared with the activity type of: ",
+            result.activityType
+          );
+        } else {
+          console.log("shared");
+        }
+      } else if (result.action === Share.dismissedAction) {
+        console.log("dismissed");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <View className={`bg-white flex-1 items-center`}>
       <Animated.Image
-        sharedTransitionTag="sharedTag"
+        entering={FadeIn.duration(400).delay(300)}
         source={{ uri: item.url }}
         style={{ width: width, height: height * 0.6, resizeMode: "repeat" }}
       />
@@ -36,66 +77,147 @@ export default function PostScreen(props) {
         className={`flex-row justify-between items-center w-full absolute`}
       >
         <TouchableOpacity
-          className={`px-1 rounded-xl ml-4`}
-          style={{ backgroundColor: "white" }}
+          activeOpacity={0.8}
+          className={`p-1 rounded-xl ml-4`}
+          style={{ backgroundColor: "white", borderWidth: 1, elevation: 10 }}
           onPress={() => navigation.goBack()}
         >
-          <ChevronLeftIcon size={width * 0.08} strokeWidth={4} color="black" />
+          <ChevronLeftIcon size={width * 0.07} strokeWidth={4} color="black" />
         </TouchableOpacity>
 
-        <TouchableOpacity
-          className={`p-2 rounded-full mr-4`}
-          style={{ backgroundColor: "white" }}
+        {/* <TouchableOpacity
+          activeOpacity={0.5}
+          className={`p-1 rounded-xl mr-4`}
+          style={{ backgroundColor: "white", borderWidth: 1, elevation: 10 }}
           onPress={() => toggleFavourite(!isFavourite)}
         >
-          <HeartIcon
+          <Ionicons
+            name="ios-warning-outline"
             size={width * 0.07}
             strokeWidth={4}
-            color={isFavourite ? "red" : "black"}
+            color="black"
           />
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </SafeAreaView>
 
-      <View
-        style={{
-          borderTopLeftRadius: 40,
-          borderTopRightRadius: 40,
-          width: width,
-          height: height,
-          elevation: 20,
-        }}
-        className={`px-5 justify-between bg-white pt-8 -mt-14`}
-      >
-        <ScrollView
-          showsVerticalScrollIndicator={false}
-          className={`space-y-5`}
+      <BottomSheet snapPoints={snapPoints}>
+        <View
+          style={{
+            // borderTopLeftRadius: 40,
+            // borderTopRightRadius: 40,
+            width: width,
+            height: height,
+            // elevation: 20,
+            marginTop: 1,
+          }}
+          className={`px-5 justify-between bg-white pt-8 -mt-14`}
         >
-          <View className={`flex-row`}>
-            <Animated.Text entering={FadeInLeft.duration(400).delay(400)} style={{fontSize: width*0.07, fontWeight: 'bold',}}>{item.title}</Animated.Text>
-          </View>
-          <Animated.View 
-            entering={FadeInUp.duration(400).delay(600)}
-          className={`flex-row  items-left w-full`}>
-            <Image
-              source={{ uri: item.profile_pic }}
-              style={{ width: 50, height: 50, borderRadius: 50 }}
-            />
-            <View style={{ marginLeft: 15 }}>
-              <Text style={{ fontWeight: "bold", fontSize: 20 }}>
-                {item.username}
-              </Text>
-              <Text>{item.upload_date}</Text>
+          <ScrollView
+          scrollEnabled={true}
+            showsVerticalScrollIndicator={false}
+            className={`space-y-5`}
+            style={{flex: 1}}
+          >
+            <View className={`flex-row`}>
+              <Animated.Text
+                entering={FadeInLeft.duration(400).delay(500)}
+                style={{ fontSize: width * 0.07, fontWeight: "bold" }}
+              >
+                {item.title}
+              </Animated.Text>
             </View>
-            <TouchableOpacity style={{left: width*0.40, elevation: 10 }} onPress={()=> toggleFollow(!isFollowing)}>
-              <Text className={`bg-[#39ff5d] p-2 px-3 rounded-full `}>{isFollowing? "Following": "Follow"}</Text>
-            </TouchableOpacity>
-          </Animated.View>
-          
-          <Animated.Text entering={FadeInUp.duration(400).delay(600)} style={{fontSize: 20}}>{item.description}</Animated.Text>
-          
-          
-        </ScrollView>
-      </View>
+            <Animated.View
+              entering={FadeInUp.duration(400).delay(650)}
+              className={`flex-row  items-left w-full`}
+            >
+              <Image
+                source={{ uri: item.profile_pic }}
+                style={{ width: 50, height: 50, borderRadius: 50 }}
+              />
+              <View style={{ marginLeft: 15 }}>
+                <Text style={{ fontWeight: "bold", fontSize: 20 }}>
+                  {item.username}
+                </Text>
+                <Text>{item.upload_date}</Text>
+              </View>
+              <TouchableOpacity
+                style={{ left: width * 0.4, elevation: 10 }}
+                onPress={() => toggleFollow(!isFollowing)}
+              >
+                <Text className={`bg-[#fdc018] p-2 px-3 rounded-full`} style={{fontWeight: '700'}}>
+                  {isFollowing ? "Following" : "Follow"}
+                </Text>
+              </TouchableOpacity>
+            </Animated.View>
+
+            <Animated.Text
+              entering={FadeInUp.duration(400).delay(650)}
+              style={{ fontSize: 20 }}
+            >
+              {item.description}
+            </Animated.Text>
+            
+            <Animated.View
+              entering={FadeInUp.duration(400).delay(700)}
+              style={{ height: 2, backgroundColor: "black" }}
+            ></Animated.View>
+            <Animated.View
+              entering={FadeInUp.duration(400).delay(750)}
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center",
+                marginHorizontal: 20,
+                top: -10,
+              }}
+            >
+              <TouchableOpacity onPress={() => toggleSaved(!saved)}>
+                <Ionicons
+                  name="ios-bookmarks-outline"
+                  size={24}
+                  color={saved ? "#fdc018" : "black"}
+                />
+              </TouchableOpacity>
+
+              <TouchableOpacity onPress={() => toggleFavourite(!isFavourite)}>
+                <Ionicons
+                  name="ios-heart-outline"
+                  size={24}
+                  color={isFavourite ? "red" : "black"}
+                />
+              </TouchableOpacity>
+              <TouchableOpacity onPress={onShare}>
+                <MaterialCommunityIcons
+                  name="share-all-outline"
+                  size={24}
+                  color="black"
+                />
+              </TouchableOpacity>
+              <Ionicons
+                name="ios-warning-outline"
+                size={24}
+                color="black"
+              />
+            </Animated.View>
+            <Animated.View
+              entering={FadeInUp.duration(400).delay(750)}
+              style={{ height: 2, backgroundColor: "black", top: -20 }}
+            ></Animated.View>
+
+            <Animated.View
+              entering={FadeInUp.duration(400).delay(800)}
+              style={{ top: -10 }}
+            >
+              {/* <Text style={{ fontSize: width * 0.05, fontWeight: "500" }}>
+                More from {item.username}
+              </Text> */}
+
+              {/* <MoreFromUser /> */}
+
+            </Animated.View>
+          </ScrollView>
+        </View>
+      </BottomSheet>
     </View>
   );
 }

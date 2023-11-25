@@ -15,6 +15,7 @@ export default function PostComponent({ item }) {
   if (item.url) {
     return (
       <TouchableOpacity
+      activeOpacity={0.8}
         onPress={() => navigation.navigate("Post", { ...item })}
       >
         <View
@@ -28,8 +29,8 @@ export default function PostComponent({ item }) {
             elevation: 5,
           }}
         >
-          <Animated.Image
-          sharedTransitionTag="sharedTag"
+          <Image
+          
             source={{ uri: item.url }}
             style={{
               flex: 1,
@@ -39,7 +40,6 @@ export default function PostComponent({ item }) {
               resizeMode: "contain",
             }}
           />
-          
           
         </View>
       </TouchableOpacity>

@@ -53,7 +53,7 @@ export default function HomeScreen() {
       
       <HeaderComponent/>
 
-      <View style={{flex: 1, flexDirection: "row", height: height, marginTop: 10 }}>
+      <View style={{flex: 1, flexDirection: "row", height: height, marginTop: 0 }}>
         <FlatList
           showsVerticalScrollIndicator={false}
           data={dataPart1}

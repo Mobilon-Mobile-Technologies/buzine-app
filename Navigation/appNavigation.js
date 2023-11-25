@@ -48,7 +48,7 @@ export default function appNavigation() {
               <FontAwesome5
                 name="home"
                 size={20}
-                color={focused ? "red" : "gray"}
+                color={focused ? "#fdc018" : "gray"}
               ></FontAwesome5>
             </View>
           ),
@@ -76,7 +76,7 @@ export default function appNavigation() {
               <FontAwesome5
                 name="search"
                 size={20}
-                color={focused ? "red" : "gray"}
+                color={focused ? "#fdc018" : "gray"}
               ></FontAwesome5>
             </View>
           ),
@@ -107,7 +107,7 @@ export default function appNavigation() {
               <FontAwesome5
                 name="plus"
                 size={20}
-                color={focused ? "red" : "gray"}
+                color={focused ? "#fdc018" : "gray"}
               ></FontAwesome5>
             </View>
           ),
@@ -135,7 +135,7 @@ export default function appNavigation() {
               <FontAwesome5
                 name="bookmark"
                 size={20}
-                color={focused ? "red" : "gray"}
+                color={focused ? "#fdc018" : "gray"}
               ></FontAwesome5>
             </View>
           ),
@@ -163,7 +163,7 @@ export default function appNavigation() {
               <FontAwesome5
                 name="user-alt"
                 size={20}
-                color={focused ? "red" : "gray"}
+                color={focused ? "#fdc018" : "gray"}
               ></FontAwesome5>
             </View>
           ),
@@ -182,7 +182,7 @@ export default function appNavigation() {
         style={{
           width: getWidth() - 20,
           height: 2,
-          backgroundColor: "red",
+          backgroundColor: "#fdc018",
           position: "absolute",
           bottom: 88,
           left: 49,
