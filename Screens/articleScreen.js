@@ -23,7 +23,8 @@ import Animated, {
   FadeInUp,
 } from "react-native-reanimated";
 import { morePosts } from "../Constants/morePosts.js";
-import MoreUserPosts from "../Components/moreUserPosts.js";
+// import MoreUserPosts from "../Components/moreUserPosts.js";
+import MoreArticles from "../Components/moreArticles.js";
 import BottomButtons from "../Components/bottomButtons.js";
 
 export default function ArticleScreen(props) {
@@ -127,7 +128,7 @@ export default function ArticleScreen(props) {
             showsHorizontalScrollIndicator={false}
             data={morePosts}
             renderItem={({ item }) => (
-              <MoreUserPosts item={item}/>
+              <MoreArticles item={item}/>
             )}
           />
           <Text style={{ marginBottom: 30 }} />

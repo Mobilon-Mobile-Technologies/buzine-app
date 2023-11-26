@@ -7,6 +7,7 @@ import {
   ScrollView,
   Share,
   StyleSheet,
+  FlatList
 } from "react-native";
 import React, { useState, useMemo } from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -23,8 +24,9 @@ import Animated, {
   FadeInUp,
   FadeOut,
 } from "react-native-reanimated";
-
+import { morePosts } from "../Constants/morePosts";
 import BackButton from "../Components/backButton";
+import AuthorCard from "../Components/authorCard";
 import BottomButtons from "../Components/bottomButtons";
 
 const { width, height } = Dimensions.get("window");
@@ -162,6 +164,10 @@ export default function PostScreen(props) {
             >
               {item.description}
             </Animated.Text>
+            
+            <Text style={styles.featuredTitle}>About Author</Text>
+            
+            <AuthorCard item={item}/>
 
             {/* <Animated.View
               entering={FadeInUp.duration(400).delay(700)}
@@ -290,6 +296,12 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     flexDirection: "row",
     // elevation: 1
+  },
+  featuredTitle: {
+    fontSize: 20,
+    fontWeight: "800",
+    // marginVertical: 0,
+    marginVertical: 20
   },
   icon: {
     height: 60,

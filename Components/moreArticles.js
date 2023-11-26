@@ -4,10 +4,10 @@ import { useNavigation } from "@react-navigation/native";
 const { width, height } = Dimensions.get("screen");
 import { Ionicons } from "@expo/vector-icons";
 
-export default function MoreUserPosts({ item }) {
+export default function MoreArticles({ item }) {
   const navigation = useNavigation();
   return (
-    <TouchableOpacity activeOpacity={0.95}>
+    
       <View
         style={{
           height: height * 0.15,
@@ -46,6 +46,6 @@ export default function MoreUserPosts({ item }) {
           </View>
         </View>
       </View>
-    </TouchableOpacity>
+    
   );
 }
