@@ -11,7 +11,7 @@ export default function BackButton() {
     
     <TouchableOpacity
       activeOpacity={0.8}
-      className={`p-1 rounded-xl ml-4`}
+      className={`p-1 rounded-xl `}
       style={{ backgroundColor: "white", borderWidth: 1, elevation: 10 }}
       onPress={() => navigation.goBack()}
     >

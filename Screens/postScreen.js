@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   ScrollView,
   Share,
+  StyleSheet,
 } from "react-native";
 import React, { useState, useMemo } from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -24,22 +25,31 @@ import Animated, {
 } from "react-native-reanimated";
 
 import BackButton from "../Components/backButton";
+import BottomButtons from "../Components/bottomButtons";
 
 const { width, height } = Dimensions.get("window");
 
 export default function PostScreen(props) {
   const item = props.route.params;
   const navigation = useNavigation();
-  const [isFavourite, toggleFavourite] = useState(false);
+  // const [isFavourite, toggleFavourite] = useState(false);
   const [isFollowing, toggleFollow] = useState(false);
+  const [liked, toggleLiked] = useState(false);
   const [saved, toggleSaved] = useState(false);
+  const [likes, setLikes] = useState(326);
   const snapPoints = useMemo(() => ["50%", "85%"], []);
-  const url = "App URL";
+  // const url = "App URL";
+
+  const likeCounter = () => {
+    toggleLiked(!liked);
+
+    setLikes((prevLikes) => (liked ? prevLikes - 1 : prevLikes + 1));
+  };
 
   const onShare = async () => {
     try {
       const result = await Share.share({
-        message: "Buzine Coming Soon" + url,
+        message: `Download the Buzine App to check out this post by ${item.username}\nTitled: ${item.title}`,
       });
 
       if (result.action === Share.sharedAction) {
@@ -68,9 +78,7 @@ export default function PostScreen(props) {
       />
       <StatusBar style={"dark"} />
 
-      <SafeAreaView
-        className={`flex-row justify-between items-center w-full absolute`}
-      >
+      <SafeAreaView className={`flex-row left-0 items-center  absolute ml-4`}>
         <BackButton />
 
         {/* <TouchableOpacity
@@ -109,7 +117,10 @@ export default function PostScreen(props) {
             <View className={`flex-row`}>
               <Animated.Text
                 entering={FadeInLeft.duration(400).delay(500)}
-                style={{ fontSize: width * 0.07, fontWeight: "bold" }}
+                style={{
+                  fontSize: width * 0.07,
+                  fontWeight: "bold",
+                }}
               >
                 {item.title}
               </Animated.Text>
@@ -147,11 +158,12 @@ export default function PostScreen(props) {
             <Animated.Text
               entering={FadeInUp.duration(400).delay(650)}
               style={{ fontSize: 20 }}
+              numberOfLines={6}
             >
               {item.description}
             </Animated.Text>
 
-            <Animated.View
+            {/* <Animated.View
               entering={FadeInUp.duration(400).delay(700)}
               style={{ height: 2, backgroundColor: "black" }}
             ></Animated.View>
@@ -192,7 +204,72 @@ export default function PostScreen(props) {
             <Animated.View
               entering={FadeInUp.duration(400).delay(750)}
               style={{ height: 2, backgroundColor: "black", top: -20 }}
-            ></Animated.View>
+            ></Animated.View> */}
+
+            <Animated.View
+              entering={FadeIn.duration(400).delay(900)}
+              style={[
+                styles.bottomActions,
+                {
+                  // paddingHorizontal: 20,
+                  // position: "absolute",
+                  bottom: 0,
+                  right: 0,
+                  left: 0,
+                },
+              ]}
+            >
+              <View
+                style={{
+                  flexDirection: "row",
+                  height: 40,
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <TouchableOpacity onPress={() => likeCounter()}>
+                  <Ionicons
+                    name="ios-heart-outline"
+                    size={24}
+                    style={{ marginHorizontal: 10 }}
+                    color={liked ? "red" : "black"}
+                  />
+                </TouchableOpacity>
+                <Text>{likes}</Text>
+              </View>
+              <View
+                style={{
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                }}
+              >
+                <TouchableOpacity onPress={() => onShare()}>
+                  <View style={[styles.icon]}>
+                    <MaterialCommunityIcons
+                      name="share-all-outline"
+                      size={24}
+                      color="black"
+                    />
+                  </View>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => toggleSaved(!saved)}>
+                  <View style={[styles.icon]}>
+                    <Ionicons
+                      name="ios-bookmarks-outline"
+                      size={24}
+                      color={saved ? "#fdc018" : "black"}
+                    />
+                  </View>
+                </TouchableOpacity>
+                <View style={[styles.icon]}>
+                  <Ionicons
+                    name="ios-warning-outline"
+                    size={24}
+                    color="black"
+                  />
+                </View>
+              </View>
+            </Animated.View>
 
             <Animated.View
               entering={FadeInUp.duration(400).delay(800)}
@@ -204,3 +281,20 @@ export default function PostScreen(props) {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  bottomActions: {
+    height: 60,
+    backgroundColor: "white",
+    alignItems: "center",
+    justifyContent: "space-between",
+    flexDirection: "row",
+    // elevation: 1
+  },
+  icon: {
+    height: 60,
+    width: 60,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
