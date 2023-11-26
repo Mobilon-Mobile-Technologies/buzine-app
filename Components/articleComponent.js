@@ -1,6 +1,6 @@
 import { View, Text, Dimensions, Image, TouchableOpacity } from "react-native";
 import React from "react";
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation } from "@react-navigation/native";
 
 const { width, height } = Dimensions.get("window");
 
@@ -8,13 +8,13 @@ const cardWidth = width * 0.45;
 const cardHeight = height * 0.2;
 
 export default function ArticleComponent({ item }) {
-
-  const navigation=useNavigation();
+  const navigation = useNavigation();
 
   if (item.url) {
     return (
       <TouchableOpacity
-      onPress={()=>navigation.navigate("Article")}>
+        onPress={() => navigation.navigate("Article", { ...item })}
+      >
         <View
           style={{
             height: cardHeight,

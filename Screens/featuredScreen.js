@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function SavedScreen (){
+export default function FeaturedScreen (){
   return (
     <View className={`flex-1 justify-center items-center`}>
-      <Text>SavedScreen</Text>
+      <Text>Featured screen</Text>
     </View>
   );
 }

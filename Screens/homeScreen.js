@@ -48,7 +48,7 @@ export default function HomeScreen() {
         height:  height
       }}
     >
-      <StatusBar style={'light'}/>
+      <StatusBar style={'dark'}/>
       
       
       <HeaderComponent/>

@@ -4,10 +4,8 @@ import {
   Dimensions,
   Image,
   TouchableOpacity,
-  Touchable,
   ScrollView,
   Share,
-  FlatList
 } from "react-native";
 import React, { useState, useMemo } from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -16,7 +14,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { ChevronLeftIcon } from "react-native-heroicons/outline";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
-import { HeartIcon } from "react-native-heroicons/solid";
 import BottomSheet from "@gorhom/bottom-sheet";
 import Animated, {
   FadeIn,
@@ -25,9 +22,8 @@ import Animated, {
   FadeInUp,
   FadeOut,
 } from "react-native-reanimated";
-import MoreFromUser from "../Components/moreFromUser";
-import MorePosts from "../Constants/";
 
+import BackButton from "../Components/backButton";
 
 const { width, height } = Dimensions.get("window");
 
@@ -39,7 +35,6 @@ export default function PostScreen(props) {
   const [saved, toggleSaved] = useState(false);
   const snapPoints = useMemo(() => ["50%", "85%"], []);
   const url = "App URL";
-  
 
   const onShare = async () => {
     try {
@@ -71,19 +66,12 @@ export default function PostScreen(props) {
         source={{ uri: item.url }}
         style={{ width: width, height: height * 0.6, resizeMode: "repeat" }}
       />
-      <StatusBar style={"light"} />
+      <StatusBar style={"dark"} />
 
       <SafeAreaView
         className={`flex-row justify-between items-center w-full absolute`}
       >
-        <TouchableOpacity
-          activeOpacity={0.8}
-          className={`p-1 rounded-xl ml-4`}
-          style={{ backgroundColor: "white", borderWidth: 1, elevation: 10 }}
-          onPress={() => navigation.goBack()}
-        >
-          <ChevronLeftIcon size={width * 0.07} strokeWidth={4} color="black" />
-        </TouchableOpacity>
+        <BackButton />
 
         {/* <TouchableOpacity
           activeOpacity={0.5}
@@ -113,10 +101,10 @@ export default function PostScreen(props) {
           className={`px-5 justify-between bg-white pt-8 -mt-14`}
         >
           <ScrollView
-          scrollEnabled={true}
+            scrollEnabled={true}
             showsVerticalScrollIndicator={false}
             className={`space-y-5`}
-            style={{flex: 1}}
+            style={{ flex: 1 }}
           >
             <View className={`flex-row`}>
               <Animated.Text
@@ -128,23 +116,29 @@ export default function PostScreen(props) {
             </View>
             <Animated.View
               entering={FadeInUp.duration(400).delay(650)}
-              className={`flex-row  items-left w-full`}
+              className={`flex-row justify-between items-center w-full`}
             >
-              <Image
-                source={{ uri: item.profile_pic }}
-                style={{ width: 50, height: 50, borderRadius: 50 }}
-              />
-              <View style={{ marginLeft: 15 }}>
-                <Text style={{ fontWeight: "bold", fontSize: 20 }}>
-                  {item.username}
-                </Text>
-                <Text>{item.upload_date}</Text>
+              <View style={{ flexDirection: "row" }}>
+                <Image
+                  source={{ uri: item.profile_pic }}
+                  style={{ width: 50, height: 50, borderRadius: 50 }}
+                />
+                <View style={{ marginLeft: 15 }}>
+                  <Text style={{ fontWeight: "bold", fontSize: 20 }}>
+                    {item.username}
+                  </Text>
+                  <Text>{item.upload_date}</Text>
+                </View>
               </View>
+
               <TouchableOpacity
-                style={{ left: width * 0.4, elevation: 10 }}
+                style={{ elevation: 10 }}
                 onPress={() => toggleFollow(!isFollowing)}
               >
-                <Text className={`bg-[#fdc018] p-2 px-3 rounded-full`} style={{fontWeight: '700'}}>
+                <Text
+                  className={`bg-[#fdc018] p-2 px-3 rounded-full`}
+                  style={{ fontWeight: "700" }}
+                >
                   {isFollowing ? "Following" : "Follow"}
                 </Text>
               </TouchableOpacity>
@@ -156,7 +150,7 @@ export default function PostScreen(props) {
             >
               {item.description}
             </Animated.Text>
-            
+
             <Animated.View
               entering={FadeInUp.duration(400).delay(700)}
               style={{ height: 2, backgroundColor: "black" }}
@@ -193,11 +187,7 @@ export default function PostScreen(props) {
                   color="black"
                 />
               </TouchableOpacity>
-              <Ionicons
-                name="ios-warning-outline"
-                size={24}
-                color="black"
-              />
+              <Ionicons name="ios-warning-outline" size={24} color="black" />
             </Animated.View>
             <Animated.View
               entering={FadeInUp.duration(400).delay(750)}
@@ -207,14 +197,7 @@ export default function PostScreen(props) {
             <Animated.View
               entering={FadeInUp.duration(400).delay(800)}
               style={{ top: -10 }}
-            >
-              {/* <Text style={{ fontSize: width * 0.05, fontWeight: "500" }}>
-                More from {item.username}
-              </Text> */}
-
-              {/* <MoreFromUser /> */}
-
-            </Animated.View>
+            ></Animated.View>
           </ScrollView>
         </View>
       </BottomSheet>
