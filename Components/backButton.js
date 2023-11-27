@@ -18,7 +18,7 @@ export default function BackButton() {
             alignItems: "center",
             width: 70,
             justifyContent: "center",
-            backgroundColor: "white",
+            // backgroundColor: "white",
             padding: 2,
             borderRadius: 10,
 

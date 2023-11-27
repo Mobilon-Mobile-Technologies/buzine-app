@@ -5,8 +5,6 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "../Screens/homeScreen.js";
 import SearchScreen from "../Screens/searchScreen.js";
-// import SavedScreen from "../Screens/savedScreen.js";
-import FeaturedDetails from "../Screens/featuredDetails.js";
 import FeaturedList from "../Screens/featuredList.js";
 import PostScreen from "../Screens/postScreen.js";
 import ProfileScreen from "../Screens/profileScreen.js";
@@ -16,6 +14,7 @@ import ArticleScreen from "../Screens/articleScreen.js";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import SplashScreen from "../Screens/splashScreen.js";
+import LoadingScreen from "../Screens/loadingScreen.js";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -128,7 +127,7 @@ export default function appNavigation() {
 
         <Tab.Screen
           name="Saved"
-          component={FeaturedList}
+          component={LoadingScreen}
           options={{
             tabBarIcon: ({ focused }) => (
               <View
@@ -229,9 +228,9 @@ export default function appNavigation() {
           options={{ title: "Profile Screen", headerShown: false }}
         />
         <Stack.Screen
-          name="FeatureDetails"
-          component={FeaturedDetails}
-          options={{ title: "Profile Screen", headerShown: false }}
+          name="FeatureLists"
+          component={FeaturedList}
+          options={{ title: "Featured Screen", headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>

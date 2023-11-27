@@ -40,6 +40,7 @@ export default function PostScreen(props) {
   const [saved, toggleSaved] = useState(false);
   const [likes, setLikes] = useState(326);
   const snapPoints = useMemo(() => ["50%", "85%"], []);
+  const snapPoints2=useMemo(()=>["75%", "100%"],[])
   // const url = "App URL";
 
   const likeCounter = () => {
@@ -164,6 +165,7 @@ export default function PostScreen(props) {
             >
               {item.description}
             </Animated.Text>
+            
 
             {/* <Animated.View
               entering={FadeInUp.duration(400).delay(700)}
@@ -282,6 +284,7 @@ export default function PostScreen(props) {
           </ScrollView>
         </View>
       </BottomSheet>
+      
     </View>
   );
 }

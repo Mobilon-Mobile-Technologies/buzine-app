@@ -40,7 +40,6 @@ export default function PostComponent({ item }) {
               resizeMode: "contain",
             }}
           />
-          
         </View>
       </TouchableOpacity>
     );
