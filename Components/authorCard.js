@@ -17,7 +17,7 @@ export default function AuthorCard({ item }) {
       .then((res) => {
         setData(res.data);
         // console.log(data[1]?.username)
-
+        
         const author = res.data.find(
           (entry) => entry.username === item.username
         );
@@ -50,7 +50,6 @@ export default function AuthorCard({ item }) {
       <View
         style={{
           flexDirection: "row",
-          
           justifyContent: "space-between",
         }}
       >

@@ -91,8 +91,6 @@ export default function HomeScreen() {
           // onEndReachedThreshold={0}
         />
       </View>
-      
-      
     </View>
     
   );

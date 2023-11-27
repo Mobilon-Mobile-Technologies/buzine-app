@@ -6,7 +6,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "../Screens/homeScreen.js";
 import SearchScreen from "../Screens/searchScreen.js";
 // import SavedScreen from "../Screens/savedScreen.js";
-import FeaturedScreen from "../Screens/featuredScreen.js";
+import FeaturedDetails from "../Screens/featuredDetails.js";
+import FeaturedList from "../Screens/featuredList.js";
 import PostScreen from "../Screens/postScreen.js";
 import ProfileScreen from "../Screens/profileScreen.js";
 import UploadScreen from "../Screens/uploadScreen.js";
@@ -127,7 +128,7 @@ export default function appNavigation() {
 
         <Tab.Screen
           name="Saved"
-          component={FeaturedScreen}
+          component={FeaturedList}
           options={{
             tabBarIcon: ({ focused }) => (
               <View
@@ -225,6 +226,11 @@ export default function appNavigation() {
         <Stack.Screen
           name="Profile"
           component={ProfileScreen}
+          options={{ title: "Profile Screen", headerShown: false }}
+        />
+        <Stack.Screen
+          name="FeatureDetails"
+          component={FeaturedDetails}
           options={{ title: "Profile Screen", headerShown: false }}
         />
       </Stack.Navigator>
