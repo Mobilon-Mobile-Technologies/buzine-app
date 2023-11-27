@@ -3,6 +3,7 @@
         "id": 1,
         "username": "Aiden",
         "profile_pic": "https://instagram.fdel23-1.fna.fbcdn.net/v/t51.2885-19/378998298_1429558327835950_513364371968140098_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fdel23-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=yczSOJd7xwYAX-A1Bny&edm=ACWDqb8BAAAA&ccb=7-5&oh=00_AfCNMYc31JaHWl0zpFx_fQECf06-0hyjI6t0F2YRlkxBdg&oe=6554AB66&_nc_sid=ee9879",
+        "title": "Summit Serenity",
         "post_url": "https://images.unsplash.com/photo-1700212546942-adc1597834fc?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0MDN8fHxlbnwwfHx8fHw%3D",
         "likes": "980"
     },
@@ -10,6 +11,7 @@
         "id": 2,
         "username": "Ethan",
         "profile_pic": "https://instagram.fdel23-1.fna.fbcdn.net/v/t51.2885-19/376738036_858866555651540_586937807684137894_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fdel23-1.fna.fbcdn.net&_nc_cat=1&_nc_ohc=JkrGHmhJWoYAX9AgfB8&edm=ACWDqb8BAAAA&ccb=7-5&oh=00_AfAHfTzPc1euspyxhDHEcnoEbdqLzgMm69E5TabZKMSKaA&oe=65549A27&_nc_sid=ee9879",
+        "title": "Graceful Gazes",
         "post_url": "https://images.unsplash.com/photo-1682687982093-4773cb0dbc2e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw0MDZ8fHxlbnwwfHx8fHw%3D",
         "likes": "372"
     },
@@ -17,6 +19,7 @@
         "id": 3,
         "username": "Ava",
         "profile_pic": "https://instagram.fdel23-1.fna.fbcdn.net/v/t51.2885-19/380497495_694983475391867_8005773484427088049_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fdel23-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=_MlXsHDVNzoAX_a1Wxy&edm=ACWDqb8BAAAA&ccb=7-5&oh=00_AfD49OZoKj5PAx8w_jZTk8NtHotCtaAsMCZpkC3JpXXidA&oe=6554017F&_nc_sid=ee9879",
+        "title": "Blanket of Snow",
         "post_url": "https://images.unsplash.com/photo-1699239076672-2c62e530d606?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNzd8fHxlbnwwfHx8fHw%3D",
         "likes": "1042"
     },
@@ -24,6 +27,7 @@
         "id": 4,
         "username": "Isabella",
         "profile_pic": "https://instagram.fdel23-1.fna.fbcdn.net/v/t51.2885-19/300401706_206282878402653_1888720962968405032_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fdel23-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=BU2ge5VO0GAAX8x1Yal&edm=ACWDqb8BAAAA&ccb=7-5&oh=00_AfCD_nPvIHph-GAM3DU3rYQAW1NFllSm1cGs-luQpvIE9A&oe=6555703F&_nc_sid=ee9879",
+        "title": "Timeless Beauty",
         "post_url": "https://images.unsplash.com/photo-1699793822444-092628799108?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0MDl8fHxlbnwwfHx8fHw%3D",
         "likes": "651"
     },
@@ -31,6 +35,7 @@
         "id": 5,
         "username": "Ella",
         "profile_pic": "https://instagram.fdel23-1.fna.fbcdn.net/v/t51.2885-19/338671610_958510015564185_7389476733571808788_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fdel23-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=UCwAGUZHaa4AX_cP3HE&edm=ACWDqb8BAAAA&ccb=7-5&oh=00_AfBoOZ_SI5Y2MRDeSjU2QQ_R1UDmh8zVUX7gGdP1HkAkiw&oe=65541869&_nc_sid=ee9879",
+        "title": "Echoes of Wisdom",
         "post_url": "https://images.unsplash.com/photo-1700296880231-9aac86e6fe68?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0MzR8fHxlbnwwfHx8fHw%3D",
         "likes": "1672"
     }
