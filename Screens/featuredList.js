@@ -273,7 +273,7 @@ export default function FeaturedList() {
                             color: "white",
                             fontWeight: "500",
                             fontSize: 15,
-                            marginLeft: 5
+                            marginLeft: 5,
                           }}
                         >
                           {item.likes}
@@ -298,7 +298,10 @@ export default function FeaturedList() {
           // opacity: 0.8
         }}
       >
-        <Ionicons name="ios-arrow-back-outline" size={34} color="white" />
+        <TouchableOpacity onPress={()=>navigation.goBack()}>
+          <Ionicons name="ios-arrow-back-outline" size={34} color="white" />
+        </TouchableOpacity>
+
         <Text
           style={{
             fontSize: 25,
