@@ -7,7 +7,7 @@ import {
   ScrollView,
   Share,
   StyleSheet,
-  FlatList
+  FlatList,
 } from "react-native";
 import React, { useState, useMemo } from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -80,7 +80,7 @@ export default function PostScreen(props) {
       />
       <StatusBar style={"dark"} />
 
-      <SafeAreaView className={`flex-row left-0 items-center  absolute ml-4`}>
+      <View className={`flex-row left-0 items-center  absolute ml-4`}>
         <BackButton />
 
         {/* <TouchableOpacity
@@ -96,7 +96,7 @@ export default function PostScreen(props) {
             color="black"
           />
         </TouchableOpacity> */}
-      </SafeAreaView>
+      </View>
 
       <BottomSheet snapPoints={snapPoints}>
         <View
@@ -160,14 +160,10 @@ export default function PostScreen(props) {
             <Animated.Text
               entering={FadeInUp.duration(400).delay(650)}
               style={{ fontSize: 20 }}
-              numberOfLines={6}
+              numberOfLines={7}
             >
               {item.description}
             </Animated.Text>
-            
-            <Text style={styles.featuredTitle}>About Author</Text>
-            
-            <AuthorCard item={item}/>
 
             {/* <Animated.View
               entering={FadeInUp.duration(400).delay(700)}
@@ -276,6 +272,8 @@ export default function PostScreen(props) {
                 </View>
               </View>
             </Animated.View>
+            <Text style={styles.featuredTitle}>About Author</Text>
+            <AuthorCard item={item} />
 
             <Animated.View
               entering={FadeInUp.duration(400).delay(800)}
@@ -301,7 +299,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "800",
     // marginVertical: 0,
-    marginVertical: 20
+    marginVertical: 10,
   },
   icon: {
     height: 60,

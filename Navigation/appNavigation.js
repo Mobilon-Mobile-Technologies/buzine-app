@@ -7,12 +7,14 @@ import HomeScreen from "../Screens/homeScreen.js";
 import SearchScreen from "../Screens/searchScreen.js";
 // import SavedScreen from "../Screens/savedScreen.js";
 import FeaturedScreen from "../Screens/featuredScreen.js";
+import PostScreen from "../Screens/postScreen.js";
 import ProfileScreen from "../Screens/profileScreen.js";
 import UploadScreen from "../Screens/uploadScreen.js";
-import PostScreen from "../Screens/postScreen.js";
+import AccountScreen from "../Screens/accountScreen.js";
 import ArticleScreen from "../Screens/articleScreen.js";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
+import SplashScreen from "../Screens/splashScreen.js";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -92,7 +94,7 @@ export default function appNavigation() {
           })}
         ></Tab.Screen>
 
-        <Tab.Screen
+        {/* <Tab.Screen
           name="Actions Bar"
           component={UploadScreen}
           options={{
@@ -121,7 +123,7 @@ export default function appNavigation() {
               }).start();
             },
           })}
-        ></Tab.Screen>
+        ></Tab.Screen> */}
 
         <Tab.Screen
           name="Saved"
@@ -145,7 +147,7 @@ export default function appNavigation() {
           listeners={({ navigation, route }) => ({
             tabPress: (e) => {
               Animated.spring(tabOffsetValue, {
-                toValue: getWidth() * 3,
+                toValue: getWidth() * 2,
                 useNativeDriver: true,
               }).start();
             },
@@ -154,7 +156,7 @@ export default function appNavigation() {
 
         <Tab.Screen
           name="Profile"
-          component={ProfileScreen}
+          component={AccountScreen}
           options={{
             tabBarIcon: ({ focused }) => (
               <View
@@ -173,7 +175,7 @@ export default function appNavigation() {
           listeners={({ navigation, route }) => ({
             tabPress: (e) => {
               Animated.spring(tabOffsetValue, {
-                toValue: getWidth() * 4,
+                toValue: getWidth() * 3,
                 useNativeDriver: true,
               }).start();
             },
@@ -195,10 +197,16 @@ export default function appNavigation() {
     </>
   );
 
+
   const tabOffsetValue = useRef(new Animated.Value(0)).current;
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Tabs">
+      <Stack.Navigator initialRouteName="Splash">
+      <Stack.Screen
+          name="Splash"
+          component={SplashScreen}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen
           name="Tabs"
           component={TabNavigator}
@@ -214,6 +222,11 @@ export default function appNavigation() {
           component={ArticleScreen}
           options={{ title: "Article Screen", headerShown: false }}
         />
+        <Stack.Screen
+          name="Profile"
+          component={ProfileScreen}
+          options={{ title: "Profile Screen", headerShown: false }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -224,5 +237,5 @@ function getWidth() {
 
   width = width - 80;
 
-  return width / 5;
+  return width / 4;
 }

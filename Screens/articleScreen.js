@@ -43,7 +43,6 @@ export default function ArticleScreen(props) {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "space-between",
-            marginTop: 45,
             marginBottom: 10,
             marginHorizontal: 20,
           }}
