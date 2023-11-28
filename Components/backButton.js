@@ -1,8 +1,9 @@
-import { View, Text, TouchableOpacity, Dimensions,SafeAreaView } from "react-native";
+import { View, Text, TouchableOpacity, Dimensions } from "react-native";
 import React from "react";
 import { ChevronLeftIcon } from "react-native-heroicons/outline";
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function BackButton() {
   const { width, height } = Dimensions.get("screen");
@@ -14,7 +15,6 @@ export default function BackButton() {
         <SafeAreaView
           style={{
             flexDirection: "row",
-            marginTop: 40,
             alignItems: "center",
             width: 70,
             justifyContent: "center",

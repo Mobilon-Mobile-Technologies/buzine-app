@@ -111,6 +111,9 @@ export default function PostScreen(props) {
           }}
           className={`px-5 justify-between bg-white pt-8 -mt-14`}
         >
+
+          {/* use BottomsheetScrollView it fukcing works */}
+          
           <ScrollView
             scrollEnabled={true}
             showsVerticalScrollIndicator={false}

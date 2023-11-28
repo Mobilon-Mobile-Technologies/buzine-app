@@ -53,7 +53,7 @@ export default function ArticleScreen(props) {
         <View style={{ marginHorizontal: 20 }}>
           <Animated.View
             className={`flex-row items-center`}
-            entering={FadeInDown.duration(400).delay(500)}
+            entering={FadeIn.duration(400).delay(500)}
           >
             <Ionicons name="ios-eye" size={24} color="#fdc018" />
             <Text style={{ marginLeft: 5, fontWeight: "600" }}>

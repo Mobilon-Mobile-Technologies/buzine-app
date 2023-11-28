@@ -6,7 +6,9 @@
     "bio": "Web developer and coffee enthusiast",
     "followers": "1200",
     "following": "450",
-    "posts": []
+    "uploads": "1",
+    "posts": [],
+    "about_me": "Crafting digital realms by day, indulging in the art of espresso by night. Life is a code, and I'm the coder."
   },
   {
     "id": 2,
@@ -15,7 +17,9 @@
     "bio": "Explorer of new horizons",
     "followers": "800",
     "following": "300",
-    "posts": []
+    "uploads": "12",
+    "posts": [],
+    "about_me": "Venturing into the unknown, capturing the essence of unexplored realms. A storyteller of untold adventures."
   },
   {
     "id": 3,
@@ -24,7 +28,9 @@
     "bio": "Coding ninja by day, foodie by night",
     "followers": "1500",
     "following": "700",
-    "posts": []
+    "uploads": "41",
+    "posts": [],
+    "about_me": "Conquering algorithms in daylight, savoring flavors under the moon. Bytes and bites, the perfect recipe for life."
   },
   {
     "id": 4,
@@ -33,7 +39,9 @@
     "bio": "Passionate about art and nature",
     "followers": "2000",
     "following": "900",
-    "posts": []
+    "uploads": "6",
+    "posts": [],
+    "about_me": "Expressing passion on canvas and in the embrace of nature. Each stroke a heartbeat, each leaf a chapter."
   },
   {
     "id": 5,
@@ -42,7 +50,9 @@
     "bio": "Adventurer and thrill-seeker",
     "followers": "1800",
     "following": "600",
-    "posts": []
+    "uploads": "14",
+    "posts": [],
+    "about_me": "Chasing thrills, capturing memories. Life’s an expedition, and I’m the fearless explorer of its wild landscapes."
   },
   {
     "id": 6,
@@ -51,7 +61,9 @@
     "bio": "Dreamer and book lover",
     "followers": "1600",
     "following": "500",
-    "posts": []
+    "uploads": "15",
+    "posts": [],
+    "about_me": "Lost in the realms of imagination, finding magic in stories, and dreaming of endless possibilities. Books are my portals."
   },
   {
     "id": 7,
@@ -60,7 +72,9 @@
     "bio": "Musician with a passion for life",
     "followers": "1400",
     "following": "550",
-    "posts": []
+    "uploads": "12",
+    "posts": [],
+    "about_me": "Creating melodies, embracing rhythm, and savoring every beat of the journey. Life is a symphony, and I'm the composer."
   },
   {
     "id": 8,
@@ -69,7 +83,9 @@
     "bio": "Dancer and fashion enthusiast",
     "followers": "2200",
     "following": "800",
-    "posts": []
+    "uploads": "3",
+    "posts": [],
+    "about_me": "Dancing through life, draped in style. Each movement, a chapter; each outfit, a canvas. Fashion is my language."
   },
   {
     "id": 9,
@@ -78,7 +94,9 @@
     "bio": "Science geek and proud of it!",
     "followers": "1300",
     "following": "480",
-    "posts": []
+    "uploads": "6",
+    "posts": [],
+    "about_me": "Unraveling mysteries, one equation at a time. Passionate about knowledge and discovery, living on the frontiers of science."
   },
   {
     "id": 10,
@@ -87,7 +105,9 @@
     "bio": "Sports lover and fitness freak",
     "followers": "1900",
     "following": "700",
-    "posts": []
+    "uploads": "2",
+    "posts": [],
+    "about_me": "Embracing the adrenaline, sculpting the body. Each sport, a passion; each workout, a celebration of movement."
   },
   {
     "id": 11,
@@ -96,7 +116,9 @@
     "bio": "Aspiring writer with a love for words",
     "followers": "1700",
     "following": "650",
-    "posts": []
+    "uploads": "8",
+    "posts": [],
+    "about_me": "Passionate about crafting stories, painting emotions with words, and dancing in the symphony of storytelling."
   },
   {
     "id": 12,
@@ -105,7 +127,9 @@
     "bio": "Tech enthusiast and gamer",
     "followers": "1600",
     "following": "600",
-    "posts": []
+    "uploads": "9",
+    "posts": [],
+    "about_me": "Embarking on a tech-savvy adventure, conquering virtual challenges, and navigating the ever-evolving digital landscape."
   },
   {
     "id": 13,
@@ -114,7 +138,9 @@
     "bio": "Animal lover and aspiring veterinarian",
     "followers": "1400",
     "following": "550",
-    "posts": []
+    "uploads": "10",
+    "posts": [],
+    "about_me": "Nurturing a dream of healing as an aspiring veterinarian, creating a world of compassion for our furry friends."
   },
   {
     "id": 14,
@@ -123,7 +149,9 @@
     "bio": "Adventure enthusiast | Coffee addict | Living life one day at a time",
     "followers": "1200",
     "following": "500",
-    "posts": [""]
+    "uploads": "12",
+    "posts": [],
+    "about_me": "Exploring the world, fueled by caffeine, and savoring every moment in the journey of life."
   },
   {
     "id": 15,
@@ -132,7 +160,9 @@
     "bio": "Explorer | Dog lover | Making memories around the world",
     "followers": "800",
     "following": "300",
-    "posts": [""]
+    "uploads": "21",
+    "posts": [],
+    "about_me": "Capturing moments worldwide, accompanied by a loyal companion. Every day is a new adventure, and my dog is my co-pilot."
   },
   {
     "id": 16,
@@ -141,7 +171,9 @@
     "bio": "Tech geek | Coding ninja | Living the startup life",
     "followers": "1500",
     "following": "700",
-    "posts": [""]
+    "uploads": "12",
+    "posts": [],
+    "about_me": "Building dreams in lines of code, navigating the entrepreneurial journey, and living the startup life to the fullest."
   },
   {
     "id": 17,
@@ -150,7 +182,9 @@
     "bio": "Art enthusiast | Coffee lover | Creating beauty through brushstrokes",
     "followers": "1000",
     "following": "400",
-    "posts": [""]
+    "uploads": "13",
+    "posts": [],
+    "about_me": "Expressing emotions with every brushstroke, sipping coffee, and creating beauty in the world of art."
   },
   {
     "id": 18,
@@ -159,7 +193,9 @@
     "bio": "Bookworm | Nature lover | Exploring the world of literature",
     "followers": "900",
     "following": "200",
-    "posts": [""]
+    "uploads": "14",
+    "posts": [],
+    "about_me": "Immersed in pages, finding solace in nature, and exploring the vast world of literature."
   },
   {
     "id": 19,
@@ -168,7 +204,9 @@
     "bio": "Dancer | Dreamer | Finding rhythm in every moment",
     "followers": "1100",
     "following": "600",
-    "posts": [""]
+    "uploads": "21",
+    "posts": [],
+    "about_me": "Moving to the beats of life, dancing through dreams, and finding rhythm in every moment."
   },
   {
     "id": 20,
@@ -177,6 +215,8 @@
     "bio": "Fitness freak | Health enthusiast | Chasing the fitness journey",
     "followers": "1300",
     "following": "800",
-    "posts": [""]
+    "uploads": "12",
+    "posts": [],
+    "about_me": "Striving for wellness, embracing the path to a healthier self, and chasing the exciting fitness journey."
   }
 ]

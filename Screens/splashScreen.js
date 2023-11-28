@@ -22,6 +22,7 @@ const SplashScreen = (props) => {
 
   return (
     <View style={styles.root}>
+      {/* <StatusBar style={"dark"} /> */}
       <Animated.View entering={FadeIn.duration(800).delay(200)} >
         {/* <LottieView
           source={require("../assets/lottie/splash.json")}
