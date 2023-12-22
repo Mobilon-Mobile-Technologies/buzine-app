@@ -16,10 +16,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.archit381.buzineapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8152d94f-14d4-47cb-b812-2e8ece7d9cde"
+      }
     }
   }
 }
