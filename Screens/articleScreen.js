@@ -27,6 +27,7 @@ import { morePosts } from "../Constants/morePosts.js";
 import MoreArticles from "../Components/moreArticles.js";
 import BottomButtons from "../Components/bottomButtons.js";
 
+
 export default function ArticleScreen(props) {
   const item = props.route.params;
   const [isFollowing, toggleFollow] = useState(false);

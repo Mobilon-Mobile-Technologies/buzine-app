@@ -15,6 +15,7 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import SplashScreen from "../Screens/splashScreen.js";
 import LoadingScreen from "../Screens/loadingScreen.js";
+import GenreScreen from "../Screens/genreScreen.js";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -231,6 +232,11 @@ export default function appNavigation() {
           name="FeatureLists"
           component={FeaturedList}
           options={{ title: "Featured Screen", headerShown: false }}
+        />
+        <Stack.Screen
+          name="Genre"
+          component={GenreScreen}
+          options={{ title: "Genre Screen", headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>
