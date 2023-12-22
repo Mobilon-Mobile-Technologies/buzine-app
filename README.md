@@ -4,13 +4,13 @@ Welcome to Buzine, a content sharing platform tailored to your taste. Express yo
 
 ## Why Buzine?
 
-# The Problem with Instagram
+### The Problem with Instagram
 Artists on Instagram often face overshadowing, leading to slow growth and a frustrating experience. Buzine is here to change that.
 
-# Community-Centric Environment
+### Community-Centric Environment
 Buzine fosters a community-like environment within university circles, ensuring artists get the spotlight they deserve.
 
-# Weekly Top Artists
+### Weekly Top Artists
 Stand out with our Weekly Top Artists feature, providing exposure to the best creators in set genres. A strong incentive for honing your craft.
 
 
