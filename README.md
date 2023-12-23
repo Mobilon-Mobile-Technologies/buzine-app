@@ -16,14 +16,12 @@ Stand out with our Weekly Top Artists feature, providing exposure to the best cr
 
 ![images](https://github.com/Mobilon-Mobile-Technologies/buzine-app/blob/master/assets/app_data/buzine.png)
 
-# How to Install ?
+# How to Setup ?
 
 Step1: Clone this Repository into your local machine
 
 Step2: Go inside the folder and run "npm install"
 
-Step3: Use your Firebase credentials and change data accordingly
-
-Step4: To Start the App run "npm run start"
+Step3: To Start the App run "npm run start"
 
 # Thank You !
