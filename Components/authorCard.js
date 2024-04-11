@@ -9,7 +9,7 @@ export default function AuthorCard({ item }) {
   const [data, setData] = useState([]);
   const [authordata, setAuthorData] = useState([]);
   const baseURL =
-    "https://raw.githubusercontent.com/Mobilon-Mobile-Technologies/buzine-app/archit-branch/Constants/users.json";
+    "https://raw.githubusercontent.com/Mobilon-Mobile-Technologies/buzine-app/master/Constants/users.json";
 
   useEffect(() => {
     axios
