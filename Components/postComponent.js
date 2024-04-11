@@ -37,7 +37,7 @@ export default function PostComponent({ item }) {
               width: undefined,
               height: undefined,
               borderRadius: 20,
-              resizeMode: "contain",
+              resizeMode: "cover",
             }}
           />
         </View>

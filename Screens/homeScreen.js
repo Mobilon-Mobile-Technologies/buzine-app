@@ -17,7 +17,7 @@ export default function HomeScreen() {
   
 
   const baseURL =
-    "https://raw.githubusercontent.com/Mobilon-Mobile-Technologies/buzine-app/archit-branch/Constants/index.json";
+    "https://raw.githubusercontent.com/Mobilon-Mobile-Technologies/buzine-app/master/Constants/index.json";
 
   useEffect(() => {
     axios

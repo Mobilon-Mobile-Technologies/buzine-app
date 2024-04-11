@@ -10,6 +10,8 @@ const cardHeight = height * 0.2;
 export default function ArticleComponent({ item }) {
   const navigation = useNavigation();
 
+  const tempImage="https://scontent.cdninstagram.com/v/t51.29350-15/371137545_1545056536251315_4018540056741051070_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyLmYyOTM1MCJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=103&_nc_ohc=B91h8TGZppkAb7KAkoQ&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzE3OTMzMjcyMzA2NzYyMDcwNA%3D%3D.2-ccb7-5&oh=00_AfCYM0jv-cH1U6iIxEpHsbLQ7KJi_4HSNuC31UKcOGC5ag&oe=661C0472&_nc_sid=10d13b";
+
   if (item.url) {
     return (
       <TouchableOpacity
@@ -30,10 +32,10 @@ export default function ArticleComponent({ item }) {
             source={{ uri: item.url }}
             style={{
               flex: 1,
-              width: undefined,
-              height: undefined,
+              // width: ,
+              // height: undefined,
               borderRadius: 20,
-              resizeMode: "contain",
+              resizeMode: 'cover'
             }}
           />
           {/* <View style={{position: 'absolute'}}>

@@ -77,7 +77,7 @@ export default function PostScreen(props) {
       <Animated.Image
         entering={FadeIn.duration(400).delay(300)}
         source={{ uri: item.url }}
-        style={{ width: width, height: height * 0.6, resizeMode: "repeat" }}
+        style={{ width: width, height: height * 0.6, resizeMode: "cover" }}
       />
       <StatusBar style={"dark"} />
 
