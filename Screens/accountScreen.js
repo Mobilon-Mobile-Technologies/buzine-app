@@ -63,7 +63,7 @@ export default function AccountScreen() {
             <Animated.Image
               entering={FadeIn.duration(400).delay(450)}
               source={{
-                uri: "https://instagram.fdel23-1.fna.fbcdn.net/v/t51.2885-19/395094780_224963903933919_8873599177184933340_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fdel23-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=2oC4q4aTI7wAX8AMw98&edm=ACWDqb8BAAAA&ccb=7-5&oh=00_AfDwKDlZkUE9UgLXgBElVpdbxX7EGReCJCSLsRjAHpfKig&oe=656A592B&_nc_sid=ee9879",
+                uri: "https://i.ibb.co/G2sXH03/smiling-young-brunette-caucasian-girl-looks-isolated-purple-wall-141793-70792.jpg",
               }}
               style={{ height: 150, width: 150, borderRadius: 150 }}
             />
@@ -76,7 +76,7 @@ export default function AccountScreen() {
                 color: "black",
               }}
             >
-              Anna Jones
+              Lily
             </Animated.Text>
             <Animated.View
               style={{ flexDirection: "row", alignItems: "center" }}
